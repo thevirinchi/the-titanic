@@ -1,0 +1,295 @@
+html{
+	font-family:"Avenir", Helvetica, Arial, sans-serif;
+	font-size:100%;
+	line-height:1.4;
+	height:auto;
+	margin:0px;
+	padding:0px;
+  	color:#111;
+  	background:#fff;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-font-smoothing: antialiased;
+  	-o-font-smoothing: antialiased;
+}
+body{
+	margin:0px;
+	padding:0px;
+	position:absolute;
+	min-height:100%;
+	width:100%;
+	background:#1a1712;
+}
+body > img{
+	position:absolute;
+	left:-9999em;
+	height:0px;
+}
+header{
+	background:#1a1712;
+	border-bottom:4px solid #800d1e;
+	hieght:50px;
+	position:relative;
+	overflow:hidden;
+	z-index:111;
+}
+
+#header-text{
+	color:#fff;
+	/*font-family: 'Cinzel', serif;*/
+	font-family: 'Josefin Slab', serif;
+	text-indent:25px;
+}
+
+#header-moto{
+	color:#fff;
+	font-family: 'Sumana', serif;
+	text-indent:25px;
+}
+
+#header-logo{
+/*	background:url("logo.png") 20px 0px no-repeat;*/
+	color:#fff
+	height:50px;
+	display:block;
+	clear:both;
+	overflow:hidden;
+	text-indent:0px;
+	margin-top:12px;
+}
+
+.site-container{
+	display:block;
+	margin:0 auto;
+	position:relative;
+	overflow:hidden;
+	padding:0px;
+}
+/* Log in container */
+.login-container{
+	max-width:300px;
+	width:65%;
+	margin:0px auto;
+	padding:30px 30px 20px 30px;
+	text-align:center;
+	top:30px;
+	position:relative;
+	border:1px solid #d3d3d3;
+	background:#fff;
+}
+#fail-page .login-container{
+	max-width:600px;
+}
+.login-container input{
+	display:block;
+	width:90%;
+	min-height:2em;
+	margin-bottom:10px;
+	padding:0px 10px;
+	font-size:15px;
+	border-radius:0px;
+}
+.login-container label{
+	color: #666;
+	text-align:left;
+    display: block;
+    float: none;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 0;
+    width: auto;
+}
+.login-container fieldset{
+	border:none;
+	padding:0px;
+	margin:0px;
+}
+.login-container .button.submit{
+	padding:8px 10px;
+	max-width:200px;
+	display:block;
+	margin:10px auto;
+	cursor:pointer;
+	-webkit-appearance:none;
+	border-radius:0px;
+}
+.login-container h1{
+	text-align:center;
+	font-size:31px;
+	font-weight:normal;
+	margin:10px 0px 15px 0px;
+}
+.link-secondary{
+	margin:10px 0px;
+	display:block;
+}
+.link-secondary a{
+	font-weight:normal;
+	text-align:center;
+	display:inline-block;
+}
+.login-container input.button{
+	background:#2e91c2;
+	text-transform:uppercase;
+	padding:10px 5px;
+	color:#fff;
+	text-decoration:none;
+	box-shadow:none;
+	border:none;
+	font-family:inherit;
+	font-size:inherit;
+	margin:10px auto;
+	cursor:pointer;
+	max-width:200px;
+	-webkit-appearance: none;
+}
+.login-container input.button:hover, .login-container input.button:focus{
+	background:#219ed2;
+}
+a{
+	color:#2e91c2;
+	text-decoration:none;
+}
+a:hover, a:focus{
+	color:#219ed2;
+	text-decoration:underline;
+}
+a[href^="tel:"]{
+	white-space:nowrap;
+}
+.wrapper{
+	background:#eee;
+	position:relative;
+	height:100%;
+}
+#main-content{
+	/*height:70%;*/
+	min-height:490px;
+	/*padding-top:30px;*/
+	/*padding-bottom:55%;*/
+	background:#eee;
+}
+
+
+/* FOOTER */
+footer{
+	background:#1a1712;
+	color:#ddd;
+	font-size:15px;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:20px;
+	padding-right:20px;
+	position:relative;
+}
+
+.footer-block{
+	display:block;
+	margin:0px auto 10px auto;
+	max-width:400px;
+	text-align:center;
+}
+.footer-block h4{
+	margin-bottom:0px;
+	font-weight:bold;
+}
+.footer-copyright{
+	display:block;
+	clear:both;
+	text-align:center;
+}
+.footer-copyright a{
+	color:#ddd;
+}
+.footer-copyright a:hover, .footer-copyright a:focus{
+	color:#fff;
+}
+
+/* all widths above phone default */
+@media screen and (min-width:750px){
+	#login-page .wrapper{
+		/*overflow:hidden;*/
+		/*position:absolute;*/
+		/*top:0px;*/
+		width:100%;
+		/*min-height:100%;*/
+		z-index:8;
+		background-color:#363636;
+	}
+	#login-page #main-content{
+		background:#888;
+		/*max-width:100px;*/
+		margin:0px auto 0px auto;
+		height:0px;
+		width:100%;
+		min-height:0px;
+	}
+	#login-page .login-container{
+		margin:0px 0px 50px 0px;
+		left:30px;
+		top:20px;
+	}
+	.login-container{
+		width:55%;
+	}
+	footer{
+		padding-left:0px;
+		padding-right:0px;
+	}
+	footer .site-container{
+		max-width:1200px;
+		margin:0 auto;
+	}
+	.footer-block{
+		float:left;
+		text-align:left;
+		margin-left:5%;
+		width:25%;
+	}
+	#fail-page .wrapper,
+	#logout-page .wrapper,
+	#session-timeout .wrapper{
+		position:absolute;
+		width:100%;
+	}
+	#fail-page footer,
+	#logout-page footer,
+	#session-timeout footer{
+		position:absolute;
+		bottom:0;
+		width:100%;
+	}
+}
+/* fix footer overlap for non login page 730 in height matches where the natural break happens.*/
+@media screen and (max-height:730px){
+	/*#fail-page .wrapper,
+	#logout-page .wrapper,
+	#session-timeout .wrapper{
+		position:absolute;
+		width:100%;
+	}*/
+	#fail-page footer,
+	#logout-page footer,
+	#session-timeout footer{
+		position:relative;
+	}
+}
+
+
+
+	#login-page #main-content.img-bkg{
+    	filter: alpha(opacity=50);
+		background:url("images/main3.png") center 0 no-repeat;
+		background-size:contain;
+		padding-bottom:0px;
+		height:1125px;
+		width:1500px;
+		margin:0px auto 0px auto;
+		/*background-size:cover;*/
+		/*padding-bottom:75%;*/
+	}
+	#login-page .wrapper{
+		overflow:hidden;
+		position:relative;
+	}

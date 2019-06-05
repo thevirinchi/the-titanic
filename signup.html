@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<TITLE>Webkiosk</TITLE>
+		<META charset="UTF-8">
+		<META name="viewport" content="width=device-width, initial-scale=1">
+		<LINK href="css/login.css" rel="stylesheet" type="text/css" />
+		<SCRIPT language="JavaScript" src="index.js" type="text/javascript"></SCRIPT>
+<!--		<SCRIPT language="JavaScript" src="javascript.js"></SCRIPT> -->
+		<STYLE>
+			html,body,h1,h2,h3,h4,h5 {
+				font-family: "Open Sans", sans-serif
+			}
+		</STYLE>
+		<?php
+		        $link = mysql_connect('localhost', 'root', '') or die('Could not connect: ' . mysql_error());
+		        mysql_select_db('webkiosk') or die('Could not select database');
+		?>
+	</HEAD>
+	<BODY style="background-color:#fff;" id="login-page" onload="placeCursorOnFirstInp();">
+		<HEADER>
+        	<DIV id="header">
+				<H3 id="header-text" >Women Institute of Technology</H3>
+			</DIV>
+		</HEADER>
+		<DIV class="wrapper">
+			<DIV id="main-content" class="sit-container img-bkg">
+				<DIV class="login-container">
+					<H1>Sign Up for Webkiosk</H1>
+					<FORM  id="loginForm" method="post"  name="Login"  action="signup.php">
+						<DIV class="login-input">
+							<LABEL for="IDToken1">
+								Username
+							</LABEL>
+							<INPUT placeholder="Roll Number" class="textbox" type="text" name="IDToken1" id="IDToken1" value="" pattern="^\d{8}$" title="Username is your assigned roll number of form xxxxxxxx" autofocus autocomplete required/>
+						</DIV>
+						<DIV class="login-input">
+							<LABEL for="IDToken2">
+								Name
+							</LABEL>
+							<INPUT placeholder="First Name" class="textbox" type="text" name="IDToken2" id="IDToken2" value="" autocomplete required/>
+						</DIV>
+						<DIV class="login-input">
+							<LABEL for="IDToken3">
+								Name
+							</LABEL>
+							<INPUT placeholder="Last Name" class="textbox" type="text" name="IDToken3" id="IDToken3" value="" autocomplete required/>
+						</DIV>
+						<DIV class="login-input">
+							<LABEL for="IDToken4">
+								Password
+							</LABEL>
+							<INPUT placeholder="Password" class="textbox" type="password" name="IDToken4" id="IDToken4" value="" pattern="^(?=.*\d)(?=.*[@#\-_$%^&+=§!\?])(?=.*[a-z])(?=.*[A-Z])[0-9A-Za-z@#\-_$%^&+=§!\?]{8,20}$" required/>
+						</div>
+						<DIV class="login-input">
+							<LABEL for="IDToken5">
+								Deapartment ID
+							</LABEL>
+							<INPUT placeholder="Department ID" class="textbox" type="text" name="IDToken5" id="IDToken5" value="" required/>
+						</div>
+						<FIELDSET>
+							<INPUT name="Login.Submit" type="submit" onclick="" class="button primary submit" value="Submit" />
+						</FIELDSET>
+						<P class="link-secondary">
+							<A href="#">Cancel</A>
+						</P>
+					</FORM>
+					<div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
+				</DIV>
+			</DIV>
+		</DIV>
+	</BODY>
+</HTML>

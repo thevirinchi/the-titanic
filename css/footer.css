@@ -1,0 +1,9 @@
+.wrapper{  margin: 10% auto;  width:80%;}
+ul{  list-style: none;  margin: 0;  padding: 0;}
+label{	text-align: left;  display: block;  cursor: pointer;  padding: 10px;}
+label{  border-bottom: 1px solid #fff;}
+ul ul li{  padding: 10px;}
+.check{  position: absolute;  left: -9999px;}
+.check ~ ul{  height: 0;  transform: scaleY(0);}
+.check:checked ~ ul{  height: 100%;  transform-origin: top;  transition: transform .2s ease-out;  transform: scaleY(1);}
+input[type="checkbox"]:checked + label{  border-bottom: 1px solid #fff;}
